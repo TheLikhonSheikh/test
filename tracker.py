@@ -2,7 +2,7 @@ import requests
 
 
 def get_prices():
-    name = "NAME OF PROJECT"
+    name = "Pitbull"
 
     crypto_data = requests.get("https://api.pancakeswap.info/api/tokens").json()["data"]
 
@@ -10,7 +10,7 @@ def get_prices():
     for i in crypto_data:
         current = crypto_data[i]
 
-        if current['name'] == name:
+        if current['name'] == Pitbull:
           data = {
               "PriceUSD": current["price"],
               "PriceBNB": current["price_BNB"],
